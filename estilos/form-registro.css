@@ -1,0 +1,54 @@
+
+/*
+    Referencia:
+    https://freefrontend.com/css-forms/#2025-08-25-neo-brutalism-login-page-using-css-l
+*/
+
+:root {
+    --primary: #000000;
+    --secondary: #FFFFFF;
+    --accent: #FF5E5B;
+    --shadow: 8px 8px 0px var(--primary);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+
+#registro-contenedor {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgb(241, 199, 220);
+    border: 1px solid rgb(190, 191, 189);
+    border-radius: 10px;
+}
+
+#registro-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+#registro-form .campo-registro {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#registro-form .boton-registro {
+    grid-column: 1 / 3;
+}
