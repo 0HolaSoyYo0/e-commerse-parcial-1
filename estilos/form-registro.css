@@ -6,7 +6,7 @@
 
 :root {
     --primary: #000000;
-    --secondary: #FFFFFF;
+    --secondary: #beeaf9;
     --accent: #FF5E5B;
     --shadow: 8px 8px 0px var(--primary);
 }
@@ -28,27 +28,44 @@ body {
 }
 
 
-#registro-contenedor {
+.registro-contenedor {
+    width: 100%;
     max-width: 600px;
     margin: 40px auto;
     padding: 30px;
-    background-color: rgb(241, 199, 220);
-    border: 1px solid rgb(190, 191, 189);
+    background-color: var(--secondary);
+    border: 1px solid var(--primary);
+    box-shadow: var(--shadow);
+    /* position: relative; */
     border-radius: 10px;
 }
 
-#registro-form {
+/* #registro-contenedro::berfore {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    right: -6px;
+    bottom: -6px;
+    border: 1px solid var(--primary);
+    z-index: -1;
+    border-radius: 12px;
+} */
+
+
+
+.registro-form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 16px;
 }
 
-#registro-form .campo-registro {
+.registro-form .campo-registro {
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
 
-#registro-form .boton-registro {
+.registro-form .boton-registro {
     grid-column: 1 / 3;
 }
