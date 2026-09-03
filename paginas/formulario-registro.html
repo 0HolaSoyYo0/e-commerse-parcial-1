@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="/estilos/form-registro.css">
+</head>
+<body>
+
+    <section class="contenedor">
+
+        <h1>Crear Usuario</h1>
+
+        <form class="formulario">
+            <div class="entrada">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="nombre">
+            </div>
+            
+            <div class="entrada">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" name="apellido" placeholder="apellido">
+            </div>
+
+            <div class="entrada">
+                <label for="rut">RUT</label>
+                <input type="text" id="rut" name="rut" placeholder="10.222.123-1">
+            </div>
+
+            <div class="entrada">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario">
+            </div>
+
+            <div class="entrada">
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="9 111222333">
+            </div>
+
+            <div class="entrada">
+                <label for="fechaNacimiento">Fecha de Nacimiento</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+            </div>
+            
+            <div class="correo entrada">
+                <label for="correoElectronico">Email</label>
+                <input type="email" id="correoElectronico" name="correo_electronico" placeholder="tu@correo.cl">
+            </div>
+            
+            <div class="direccion entrada">
+                <label for="direccion">Direccion</label>
+                <input type="text" id="direccion" name="direccion">
+            </div>
+
+            <div class="entrada">
+                <label for="contraseña">Contraseña</label>
+                <input type="password" id="contraseña" name="contraseña" placeholder="******************">
+            </div>
+
+            <div class="boton-envio">
+                <button id="registrar" type="submit">Crear Cuenta</button>
+            </div>
+
+            <div class="boton-inicio">
+                <button id="iniciar" type="button">Iniciar sesion</button>
+            </div>
+
+        </form>
+    </section>
+    
+</body>
+</html>
