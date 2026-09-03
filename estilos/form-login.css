@@ -1,0 +1,66 @@
+:root {
+    --primary: #000;
+    --secondary: #beeaf9;
+    --accent: #ff5e5b;
+    --shadow: 18px 8px 10px var(--primary);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    background: var(--secondary);
+    font-size: 120%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow);
+    padding: 30px;
+}
+
+h1 { text-align: center; margin-top: 0; }
+
+.formulario { display: flex; flex-direction: column; gap: 15px; }
+
+.entrada { display: flex; flex-direction: column; gap: 6px; }
+
+label { font-weight: bold; }
+
+input {
+    text-align: center;
+    border: 2px solid var(--primary);
+    padding: 8px;
+}
+
+button {
+    font-weight: bold;
+    color: #fff;
+    border: 2px solid var(--primary);
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 4px 4px 0px var(--primary);
+    transform: translate(-2px, -2px);
+}
+
+#iniciar { background: rgba(35, 192, 8, 0.622); width: 100%; }
+
+.pie-formulario {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#registrar { background: var(--accent); }
