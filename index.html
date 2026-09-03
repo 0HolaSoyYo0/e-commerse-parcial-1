@@ -1,252 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Deportes - Inicio</title>
-    <style>
-        /* Estilos Generales */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #ffffff;
-            color: #333;
-            line-height: 1.6;
-        }
-        a {
-            text-decoration: none;
-            color: #d32f2f; /* Rojo escarlata */
-        }
-        a:hover {
-            color: #ff5722; /* Naranja */
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Utilidades para imágenes de relleno (Cajas con X) */
-        .placeholder-img {
-            background-color: #e0e0e0;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid #999;
-        }
-        .placeholder-img::before, .placeholder-img::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            background-color: #999;
-        }
-        .placeholder-img::before { transform: rotate(45deg); }
-        .placeholder-img::after { transform: rotate(-45deg); }
-
-        /* Encabezado y Navegación */
-        header {
-            background-color: #f8f8f8;
-            border-bottom: 2px solid #333;
-            padding: 15px 0;
-        }
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo-area {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            color: #d32f2f;
-        }
-        .logo-box {
-            width: 20px;
-            height: 20px;
-            background-color: #333;
-        }
-        .main-nav ul {
-            list-style: none;
-            display: flex;
-            gap: 15px;
-        }
-        .main-nav a {
-            color: #0056b3; /* Azul estilo link original */
-            font-size: 0.9rem;
-        }
-        .cart-area {
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        /* Sub-menú Login */
-        .top-bar {
-            text-align: right;
-            padding: 10px 0;
-            font-size: 0.85rem;
-        }
-        .top-bar a {
-            color: #0056b3;
-        }
-
-        /* Sección Hero (Banner Principal) */
-        .hero {
-            background-color: #e9ecef;
-            padding: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-            border-radius: 4px;
-        }
-        .hero-text {
-            flex: 1;
-            padding-right: 40px;
-        }
-        .hero-text h1 {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        .hero-text p {
-            font-size: 0.85rem;
-            margin-bottom: 25px;
-            color: #555;
-        }
-        .btn-hero {
-            display: inline-block;
-            padding: 10px 20px;
-            border: 2px solid #333;
-            background-color: transparent;
-            color: #333;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        .btn-hero:hover {
-            background-color: #d32f2f;
-            color: white;
-            border-color: #d32f2f;
-        }
-        .hero-img {
-            flex: 1;
-            height: 250px;
-            overflow: hidden;
-        }
-
-        /* Cuadrícula de Productos */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-bottom: 40px;
-        }
-        .product-card {
-            background-color: #f8f8f8;
-            padding: 15px;
-            border-radius: 4px;
-            text-align: center;
-        }
-        .product-card .placeholder-img {
-            height: 150px;
-            margin-bottom: 15px;
-            overflow: hidden;
-        }
-        .product-title {
-            font-size: 0.9rem;
-            color: #0056b3;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .product-details {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.8rem;
-            color: #555;
-        }
-        .product-price {
-            font-weight: bold;
-            color: #333;
-        }
-
-        /* Pie de Página (Footer) */
-        footer {
-            border-top: 2px solid #333;
-            padding: 20px 0;
-            margin-top: 40px;
-        }
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            font-size: 0.8rem;
-        }
-        .footer-left .brand-name {
-            font-weight: bold;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .payment-icons span {
-            display: inline-block;
-            width: 30px;
-            height: 20px;
-            background-color: #ccc;
-            margin-right: 5px;
-            text-align: center;
-            line-height: 20px;
-            font-size: 0.6rem;
-            color: #666;
-        }
-        .footer-center {
-            text-align: center;
-        }
-        .footer-center a {
-            color: #0056b3;
-            margin: 0 5px;
-        }
-        .footer-right {
-            text-align: right;
-        }
-        .newsletter-form {
-            display: flex;
-            margin-top: 5px;
-        }
-        .newsletter-form input {
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-right: none;
-        }
-        .newsletter-form button {
-            padding: 5px 15px;
-            background-color: #666;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .newsletter-form button:hover {
-            background-color: #d32f2f;
-        }
-    </style>
+    <link rel="stylesheet" href="estilos/style-index.css">
 </head>
 <body>
 
     <header>
-        <div class="container header-content">
-            <div class="logo-area">
-                <div class="logo-box"></div>
+        <div class="contenedor contenido-encabezado">
+            <div class="area-logo">
+                <div class="caja-logo"></div>
                 <span>TODO DEPORTES</span>
             </div>
-            <nav class="main-nav">
+            <nav class="navegacion-principal">
                 <ul>
                     <li><a href="#">Home</a> | </li>
                     <li><a href="#">Productos</a> | </li>
@@ -255,91 +23,91 @@
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
-            <div class="cart-area">
-                🛒 Cart (0)
+            <div class="area-carrito">
+                🛒 Carrito (0)
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="top-bar">
+    <div class="contenedor">
+        <div class="barra-superior">
             <a href="login.html">Iniciar sesión</a> | <a href="registro.html">Registrar usuario</a>
         </div>
 
         <main>
-            <section class="hero">
-                <div class="hero-text">
+            <section class="seccion-principal">
+                <div class="texto-principal">
                     <h1>TIENDA ONLINE</h1>
                     <p>Encuentra los mejores implementos para deportes de contacto, acuáticos, extremos, aéreos y más. Equípate como un profesional ahora mismo.</p>
-                    <button class="btn-hero">⬇ Ver productos</button>
+                    <button class="boton-principal">⬇ Ver productos</button>
                 </div>
-                <div class="hero-img placeholder-img"></div>
+                <div class="imagen-principal imagen-placeholder"></div>
             </section>
 
-            <section class="product-grid">
-                <div class="product-card">
-                    <div class="placeholder-img"></div>
-                    <a href="#" class="product-title">Product Title</a>
-                    <div class="product-details">
-                        <span>Attributes</span>
-                        <span class="product-price">$00.00</span>
+            <section class="cuadricula-productos">
+                <div class="tarjeta-producto">
+                    <div class="imagen-placeholder"></div>
+                    <a href="#" class="titulo-producto">Título Producto</a>
+                    <div class="detalles-producto">
+                        <span>Atributos</span>
+                        <span class="precio-producto">$00.00</span>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="placeholder-img"></div>
-                    <a href="#" class="product-title">Product Title</a>
-                    <div class="product-details">
-                        <span>Attributes</span>
-                        <span class="product-price">$00.00</span>
+                <div class="tarjeta-producto">
+                    <div class="imagen-placeholder"></div>
+                    <a href="#" class="titulo-producto">Título Producto</a>
+                    <div class="detalles-producto">
+                        <span>Atributos</span>
+                        <span class="precio-producto">$00.00</span>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="placeholder-img"></div>
-                    <a href="#" class="product-title">Product Title</a>
-                    <div class="product-details">
-                        <span>Attributes</span>
-                        <span class="product-price">$00.00</span>
+                <div class="tarjeta-producto">
+                    <div class="imagen-placeholder"></div>
+                    <a href="#" class="titulo-producto">Título Producto</a>
+                    <div class="detalles-producto">
+                        <span>Atributos</span>
+                        <span class="precio-producto">$00.00</span>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="placeholder-img"></div>
-                    <a href="#" class="product-title">Product Title</a>
-                    <div class="product-details">
-                        <span>Attributes</span>
-                        <span class="product-price">$00.00</span>
+                <div class="tarjeta-producto">
+                    <div class="imagen-placeholder"></div>
+                    <a href="#" class="titulo-producto">Título Producto</a>
+                    <div class="detalles-producto">
+                        <span>Atributos</span>
+                        <span class="precio-producto">$00.00</span>
                     </div>
                 </div>
 
-                <div class="product-card">
-                    <div class="placeholder-img"></div>
-                    <a href="#" class="product-title">Product Title</a>
-                    <div class="product-details">
-                        <span>Attributes</span>
-                        <span class="product-price">$00.00</span>
+                <div class="tarjeta-producto">
+                    <div class="imagen-placeholder"></div>
+                    <a href="#" class="titulo-producto">Título Producto</a>
+                    <div class="detalles-producto">
+                        <span>Atributos</span>
+                        <span class="precio-producto">$00.00</span>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="placeholder-img"></div>
-                    <a href="#" class="product-title">Product Title</a>
-                    <div class="product-details">
-                        <span>Attributes</span>
-                        <span class="product-price">$00.00</span>
+                <div class="tarjeta-producto">
+                    <div class="imagen-placeholder"></div>
+                    <a href="#" class="titulo-producto">Título Producto</a>
+                    <div class="detalles-producto">
+                        <span>Atributos</span>
+                        <span class="precio-producto">$00.00</span>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="placeholder-img"></div>
-                    <a href="#" class="product-title">Product Title</a>
-                    <div class="product-details">
-                        <span>Attributes</span>
-                        <span class="product-price">$00.00</span>
+                <div class="tarjeta-producto">
+                    <div class="imagen-placeholder"></div>
+                    <a href="#" class="titulo-producto">Título Producto</a>
+                    <div class="detalles-producto">
+                        <span>Atributos</span>
+                        <span class="precio-producto">$00.00</span>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="placeholder-img"></div>
-                    <a href="#" class="product-title">Product Title</a>
-                    <div class="product-details">
-                        <span>Attributes</span>
-                        <span class="product-price">$00.00</span>
+                <div class="tarjeta-producto">
+                    <div class="imagen-placeholder"></div>
+                    <a href="#" class="titulo-producto">Título Producto</a>
+                    <div class="detalles-producto">
+                        <span>Atributos</span>
+                        <span class="precio-producto">$00.00</span>
                     </div>
                 </div>
             </section>
@@ -347,27 +115,27 @@
     </div>
 
     <footer>
-        <div class="container footer-content">
-            <div class="footer-left">
-                <span class="brand-name">Todo Deportes</span>
-                <div class="payment-icons">
+        <div class="contenedor contenido-pie">
+            <div class="pie-izquierda">
+                <span class="nombre-marca">Todo Deportes</span>
+                <div class="iconos-pago">
                     <span>VISA</span>
                     <span>MC</span>
                     <span>AMEX</span>
                 </div>
             </div>
             
-            <div class="footer-center">
-                <a href="#">Category X</a> | 
-                <a href="#">Category Y</a> | 
-                <a href="#">Category Z</a>
+            <div class="pie-centro">
+                <a href="#">Categoría X</a> | 
+                <a href="#">Categoría Y</a> | 
+                <a href="#">Categoría Z</a>
             </div>
 
-            <div class="footer-right">
-                <p>Stay In Touch! Join our Newsletter:</p>
-                <form class="newsletter-form" action="#" method="POST">
-                    <input type="email" placeholder="Enter Email" required>
-                    <button type="submit">Subscribe</button>
+            <div class="pie-derecha">
+                <p>¡Mantente en contacto! Únete a nuestro boletín:</p>
+                <form class="formulario-boletin" action="#" method="POST">
+                    <input type="email" placeholder="Ingresa tu email" required>
+                    <button type="submit">Suscribirse</button>
                 </form>
             </div>
         </div>
