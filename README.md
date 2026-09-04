@@ -639,10 +639,3 @@ Se busca mantener:
 **Proyecto desarrollado por estudiantes del Instituto Profesional DuocUC.**
 
 **Asignatura:** DESARROLLO FULLSTACK II_004D
-
-> Los integrantes y sus respectivos roles pueden incorporarse en esta sección.
-
-```
-
-Esta versión queda mucho más alineada con la pauta porque el README **documenta el proyecto que se está construyendo**, pero no confunde los requisitos de la evaluación con funcionalidades que todavía no están implementadas.
-```
