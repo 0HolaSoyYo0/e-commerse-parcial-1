@@ -26,13 +26,26 @@ body {
     padding: 30px;
 }
 
-h1 { text-align: center; margin-top: 0; }
+h1 {
+    text-align: center;
+    margin-top: 0;
+}
 
-.formulario { display: flex; flex-direction: column; gap: 15px; }
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 
-.entrada { display: flex; flex-direction: column; gap: 6px; }
+.entrada {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
 
-label { font-weight: bold; }
+label {
+    font-weight: bold;
+}
 
 input {
     text-align: center;
@@ -53,7 +66,10 @@ button:hover {
     transform: translate(-2px, -2px);
 }
 
-#iniciar { background: rgba(35, 192, 8, 0.622); width: 100%; }
+#iniciar {
+    background: rgba(35, 192, 8, 0.622);
+    width: 100%;
+}
 
 .pie-formulario {
     margin-top: 25px;
@@ -63,4 +79,6 @@ button:hover {
     gap: 10px;
 }
 
-#registrar { background: var(--accent); }
+#registrar {
+    background: var(--accent);
+}
