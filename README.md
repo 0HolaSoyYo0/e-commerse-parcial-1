@@ -1,6 +1,4 @@
-Entendido. Aquí tienes el contenido del `README.md` directamente, listo para copiar y pegar en GitHub:
 
-````markdown
 # 🏋️ E-Commerce de Productos Deportivos
 
 Proyecto académico desarrollado por estudiantes del **Instituto Profesional DuocUC** para la asignatura **DESARROLLO FULLSTACK II_004D**.
