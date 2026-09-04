@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "nombre": "Set de Mancuernas Neopreno 5kg (Par)",
+        "precio": 22990,
+        "categoria": "fitness_musculacion"
+    },
+    {
+        "id": 2,
+        "nombre": "Pesa Rusa Kettlebell 12kg Iron",
+        "precio": 28990,
+        "categoria": "fitness_musculacion"
+    },
+    {
+        "id": 3,
+        "nombre": "Bandas de Resistencia Elásticas Set x5",
+        "precio": 14990,
+        "categoria": "fitness_musculacion"
+    },
+    {
+        "id": 4,
+        "nombre": "Cuerda de Salto Rápido Speed Rope",
+        "precio": 11990,
+        "categoria": "fitness_musculacion"
+    },
+    {
+        "id": 5,
+        "nombre": "Barra Dominadas Multifuncional para Marco",
+        "precio": 34990,
+        "categoria": "fitness_musculacion"
+    },
+    {
+        "id": 6,
+        "nombre": "Zapatillas Running Amortiguación Alta",
+        "precio": 69990,
+        "categoria": "running_atletismo"
+    },
+    {
+        "id": 7,
+        "nombre": "Zapatillas Trail Running Todoterreno",
+        "precio": 79990,
+        "categoria": "running_atletismo"
+    },
+    {
+        "id": 8,
+        "nombre": "Zapatillas de Competición Placa de Carbono",
+        "precio": 109990,
+        "categoria": "running_atletismo"
+    },
+    {
+        "id": 9,
+        "nombre": "Polera Técnica Transpirable Running",
+        "precio": 18990,
+        "categoria": "running_atletismo"
+    },
+    {
+        "id": 10,
+        "nombre": "Cortaviento Deportivo Impermeable",
+        "precio": 34990,
+        "categoria": "running_atletismo"
+    },
+    {
+        "id": 11,
+        "nombre": "Balón de Fútbol Profesional N° 5",
+        "precio": 24990,
+        "categoria": "deportes_equipo"
+    },
+    {
+        "id": 12,
+        "nombre": "Balón de Básquetbol Cuero Sintético N° 7",
+        "precio": 22990,
+        "categoria": "deportes_equipo"
+    },
+    {
+        "id": 13,
+        "nombre": "Balón de Vóleibol Oficial de Competencia",
+        "precio": 19990,
+        "categoria": "deportes_equipo"
+    },
+    {
+        "id": 14,
+        "nombre": "Guantes de Arquero Antideslizantes",
+        "precio": 29990,
+        "categoria": "deportes_equipo"
+    },
+    {
+        "id": 15,
+        "nombre": "Set de Petos Deportivos Malla x10",
+        "precio": 29990,
+        "categoria": "deportes_equipo"
+    },
+    {
+        "id": 16,
+        "nombre": "Raqueta de Tenis Grafito Control",
+        "precio": 69990,
+        "categoria": "deportes_raqueta"
+    },
+    {
+        "id": 17,
+        "nombre": "Pala de Pádel Carbono 3K Formato Lágrima",
+        "precio": 89990,
+        "categoria": "deportes_raqueta"
+    },
+    {
+        "id": 18,
+        "nombre": "Tubo de Pelotas de Tenis x3 Presurizadas",
+        "precio": 8990,
+        "categoria": "deportes_raqueta"
+    },
+    {
+        "id": 19,
+        "nombre": "Overgrips Antideslizantes para Raqueta/Pala x3",
+        "precio": 5990,
+        "categoria": "deportes_raqueta"
+    },
+    {
+        "id": 20,
+        "nombre": "Bolso Raquetero y Paletero Doble Compartimento",
+        "precio": 39990,
+        "categoria": "deportes_raqueta"
+    },
+    {
+        "id": 21,
+        "nombre": "Guantes de Entrenamiento 12 oz Multidisciplina",
+        "precio": 34990,
+        "categoria": "deportes_combate"
+    },
+    {
+        "id": 22,
+        "nombre": "Saco de Contacto y Boxeo 100cm Relleno",
+        "precio": 49990,
+        "categoria": "deportes_combate"
+    },
+    {
+        "id": 23,
+        "nombre": "Vendas Elásticas de Protección 4.5m (Par)",
+        "precio": 7990,
+        "categoria": "deportes_combate"
+    },
+    {
+        "id": 24,
+        "nombre": "Protector Bucal Doble Termomoldeable",
+        "precio": 6990,
+        "categoria": "deportes_combate"
+    },
+    {
+        "id": 25,
+        "nombre": "Cabezal de Protección Integral Sparring",
+        "precio": 29990,
+        "categoria": "deportes_combate"
+    },
+    {
+        "id": 26,
+        "nombre": "Casco de Ciclismo MTB con Ajuste Ergonómico",
+        "precio": 27990,
+        "categoria": "ciclismo"
+    },
+    {
+        "id": 27,
+        "nombre": "Candado U-Lock Ciclismo Alta Seguridad",
+        "precio": 24990,
+        "categoria": "ciclismo"
+    },
+    {
+        "id": 28,
+        "nombre": "Juego de Luces LED Delantera y Trasera Recargables",
+        "precio": 14990,
+        "categoria": "ciclismo"
+    },
+    {
+        "id": 29,
+        "nombre": "Guantes Ciclismo Gel Antideslizantes",
+        "precio": 12990,
+        "categoria": "ciclismo"
+    },
+    {
+        "id": 30,
+        "nombre": "Inflador de Mano Portátil con Manómetro",
+        "precio": 11990,
+        "categoria": "ciclismo"
+    },
+    {
+        "id": 31,
+        "nombre": "Mochila de Trekking 45 Litros Impermeable",
+        "precio": 59990,
+        "categoria": "outdoor_trekking"
+    },
+    {
+        "id": 32,
+        "nombre": "Bastones de Senderismo de Aluminio (Par)",
+        "precio": 19990,
+        "categoria": "outdoor_trekking"
+    },
+    {
+        "id": 33,
+        "nombre": "Linterna Frontal LED Recargable 1000 Lumens",
+        "precio": 15990,
+        "categoria": "outdoor_trekking"
+    },
+    {
+        "id": 34,
+        "nombre": "Carpa Técnica 2 Personas 3 Estaciones",
+        "precio": 64990,
+        "categoria": "outdoor_trekking"
+    },
+    {
+        "id": 35,
+        "nombre": "Saco de Dormir Compacto Rango -5°C",
+        "precio": 38990,
+        "categoria": "outdoor_trekking"
+    },
+    {
+        "id": 36,
+        "nombre": "Proteína Whey Isolate 2kg",
+        "precio": 54990,
+        "categoria": "nutricion_bienestar"
+    },
+    {
+        "id": 37,
+        "nombre": "Creatina Monohidratada Micronizada 300g",
+        "precio": 24990,
+        "categoria": "nutricion_bienestar"
+    },
+    {
+        "id": 38,
+        "nombre": "Aminoácidos BCAA 2:1:1 Polvo 300g",
+        "precio": 19990,
+        "categoria": "nutricion_bienestar"
+    },
+    {
+        "id": 39,
+        "nombre": "Pack Geles Energéticos Rendimiento x10",
+        "precio": 14990,
+        "categoria": "nutricion_bienestar"
+    },
+    {
+        "id": 40,
+        "nombre": "Shaker Mezclador de Proteína Acero Inoxidable 600ml",
+        "precio": 14990,
+        "categoria": "nutricion_bienestar"
+    }
+]

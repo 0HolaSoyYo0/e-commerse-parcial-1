@@ -81,7 +81,7 @@ button:hover {
 
 .boton-envio {
     margin-right: 30px;
-    text-align:right;
+    text-align: right;
     padding-top: 10px;
 }
 
@@ -95,5 +95,5 @@ button:hover {
 }
 
 #iniciar {
-    background-color: rgba(35, 192, 8, 0.622)
+    background-color: rgba(35, 192, 8, 0.622);
 }
