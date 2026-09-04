@@ -1,7 +1,8 @@
 :root {
-    --primary: #000000;
-    --secondary: #beeaf9;
-    --accent: #ff5e5b;
+    --fondo: rgb(100, 200, 255);
+    --primary: rgb(0, 0, 0);
+    --secondary: rgb(255, 150, 100);
+    --accent: #ed4643;
     --shadow: 18px 8px 10px var(--primary);
 }
 
@@ -11,7 +12,7 @@
 }
 
 body {
-    background-color: var(--secondary);
+    background-color: var(--fondo);
     font-size: 120%;
     padding: 20px;
     display: flex;

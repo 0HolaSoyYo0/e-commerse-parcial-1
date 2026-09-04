@@ -1,39 +1,68 @@
+/* =========================================================
+   VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================================================= */
+
+:root {
+    --fondo: rgb(100, 200, 255);
+    --primary: rgb(0, 0, 0);
+    --secondary: rgb(255, 150, 100);
+    --accent: #ed4643;
+    --shadow: 18px 8px 10px var(--primary);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Courier New', monospace;
 }
 
 body {
-    background-color: #ffffff;
-    color: #333;
+    background-color: var(--fondo);
+    color: var(--primary);
     line-height: 1.6;
 }
 
+
+/* =========================================================
+   ENLACES
+   ========================================================= */
+
 a {
     text-decoration: none;
-    color: #d32f2f; /* Rojo escarlata */
+    color: var(--primary);
+    font-weight: bold;
 }
 
 a:hover {
-    color: #ff5722; /* Naranja */
+    color: var(--accent);
+    text-decoration: underline;
 }
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
 
 .contenedor {
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Utilidades para imágenes de relleno (Cajas con X) */
+
+/* =========================================================
+   PLACEHOLDER DE IMÁGENES
+   ========================================================= */
+
 .imagen-placeholder {
-    background-color: #e0e0e0;
+    background-color: var(--secondary);
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #999;
+    border: 2px solid var(--primary);
 }
 
 .imagen-placeholder::before,
@@ -41,29 +70,36 @@ a:hover {
     content: '';
     position: absolute;
     width: 100%;
-    height: 1px;
-    background-color: #999;
+    height: 2px;
+    background-color: var(--primary);
 }
 
-.imagen-placeholder::before { 
-    transform: rotate(45deg); 
+.imagen-placeholder::before {
+    transform: rotate(45deg);
 }
 
-.imagen-placeholder::after { 
-    transform: rotate(-45deg); 
+.imagen-placeholder::after {
+    transform: rotate(-45deg);
 }
 
-/* Encabezado y Navegación */
+
+/* =========================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================================= */
+
 header {
-    background-color: #f8f8f8;
-    border-bottom: 2px solid #333;
+    background-color: var(--secondary);
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow);
     padding: 15px 0;
+    margin-bottom: 30px;
 }
 
 .contenido-encabezado {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .area-logo {
@@ -72,13 +108,14 @@ header {
     gap: 10px;
     font-weight: bold;
     font-size: 1.2rem;
-    color: #d32f2f;
+    color: var(--primary);
 }
 
 .caja-logo {
     width: 20px;
     height: 20px;
-    background-color: #333;
+    background-color: var(--accent);
+    border: 2px solid var(--primary);
 }
 
 .navegacion-principal ul {
@@ -88,8 +125,14 @@ header {
 }
 
 .navegacion-principal a {
-    color: #0056b3; /* Azul estilo link original */
+    color: var(--primary);
     font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.navegacion-principal a:hover {
+    color: var(--accent);
+    transform: translate(-1px, -1px);
 }
 
 .area-carrito {
@@ -99,7 +142,11 @@ header {
     gap: 5px;
 }
 
-/* Sub-menú Login */
+
+/* =========================================================
+   BARRA SUPERIOR / LOGIN
+   ========================================================= */
+
 .barra-superior {
     text-align: right;
     padding: 10px 0;
@@ -107,18 +154,29 @@ header {
 }
 
 .barra-superior a {
-    color: #0056b3;
+    color: var(--primary);
 }
 
-/* Sección Hero (Banner Principal) */
+.barra-superior a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================================================
+   SECCIÓN PRINCIPAL / HERO
+   ========================================================= */
+
 .seccion-principal {
-    background-color: #e9ecef;
+    background-color: var(--secondary);
     padding: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
     margin-bottom: 40px;
-    border-radius: 4px;
+    border: 2px solid var(--primary);
+    border-radius: 0;
+    box-shadow: var(--shadow);
 }
 
 .texto-principal {
@@ -135,33 +193,38 @@ header {
 .texto-principal p {
     font-size: 0.85rem;
     margin-bottom: 25px;
-    color: #555;
+    color: var(--primary);
 }
 
 .boton-principal {
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #333;
-    background-color: transparent;
-    color: #333;
+    border: 2px solid var(--primary);
+    background-color: var(--accent);
+    color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .boton-principal:hover {
-    background-color: #d32f2f;
+    box-shadow: 4px 4px 0 var(--primary);
+    transform: translate(-2px, -2px);
     color: white;
-    border-color: #d32f2f;
 }
 
 .imagen-principal {
     flex: 1;
     height: 250px;
     overflow: hidden;
+    border: 2px solid var(--primary);
 }
 
-/* Cuadrícula de Productos */
+
+/* =========================================================
+   CUADRÍCULA DE PRODUCTOS
+   ========================================================= */
+
 .cuadricula-productos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -170,10 +233,18 @@ header {
 }
 
 .tarjeta-producto {
-    background-color: #f8f8f8;
+    background-color: var(--secondary);
     padding: 15px;
-    border-radius: 4px;
+    border: 2px solid var(--primary);
+    border-radius: 0;
     text-align: center;
+    box-shadow: 10px 8px 0 var(--primary);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+    box-shadow: 4px 4px 0 var(--primary);
+    transform: translate(-2px, -2px);
 }
 
 .tarjeta-producto .imagen-placeholder {
@@ -184,26 +255,36 @@ header {
 
 .titulo-producto {
     font-size: 0.9rem;
-    color: #0056b3;
+    color: var(--primary);
     margin-bottom: 10px;
     display: block;
+    font-weight: bold;
+}
+
+.titulo-producto:hover {
+    color: var(--accent);
 }
 
 .detalles-producto {
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
-    color: #555;
+    color: var(--primary);
+    gap: 10px;
 }
 
 .precio-producto {
     font-weight: bold;
-    color: #333;
+    color: var(--accent);
 }
 
-/* Pie de Página (Footer) */
+
+/* =========================================================
+   PIE DE PÁGINA
+   ========================================================= */
+
 footer {
-    border-top: 2px solid #333;
+    border-top: 2px solid var(--primary);
     padding: 20px 0;
     margin-top: 40px;
 }
@@ -212,6 +293,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    gap: 30px;
     font-size: 0.8rem;
 }
 
@@ -225,12 +307,13 @@ footer {
     display: inline-block;
     width: 30px;
     height: 20px;
-    background-color: #ccc;
+    background-color: var(--secondary);
+    border: 2px solid var(--primary);
     margin-right: 5px;
     text-align: center;
-    line-height: 20px;
+    line-height: 16px;
     font-size: 0.6rem;
-    color: #666;
+    color: var(--primary);
 }
 
 .pie-centro {
@@ -238,13 +321,22 @@ footer {
 }
 
 .pie-centro a {
-    color: #0056b3;
+    color: var(--primary);
     margin: 0 5px;
+}
+
+.pie-centro a:hover {
+    color: var(--accent);
 }
 
 .pie-derecha {
     text-align: right;
 }
+
+
+/* =========================================================
+   FORMULARIO DEL BOLETÍN
+   ========================================================= */
 
 .formulario-boletin {
     display: flex;
@@ -253,18 +345,84 @@ footer {
 
 .formulario-boletin input {
     padding: 5px;
-    border: 1px solid #ccc;
-    border-right: none;
+    border: 2px solid var(--primary);
+    border-right: 0;
+    background-color: var(--secondary);
+    color: var(--primary);
+    outline: none;
+}
+
+.formulario-boletin input:focus {
+    box-shadow: inset 0 0 0 1px var(--primary);
 }
 
 .formulario-boletin button {
     padding: 5px 15px;
-    background-color: #666;
+    background-color: var(--accent);
     color: white;
-    border: none;
+    border: 2px solid var(--primary);
+    font-weight: bold;
     cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .formulario-boletin button:hover {
-    background-color: #d32f2f;
+    background-color: var(--accent);
+    box-shadow: 4px 4px 0 var(--primary);
+    transform: translate(-2px, -2px);
+}
+
+
+/* =========================================================
+   AJUSTES RESPONSIVOS
+   ========================================================= */
+
+@media (max-width: 900px) {
+    .cuadricula-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seccion-principal {
+        flex-direction: column;
+    }
+
+    .texto-principal {
+        padding-right: 0;
+    }
+
+    .imagen-principal {
+        width: 100%;
+    }
+
+    .contenido-pie {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pie-derecha {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .cuadricula-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-encabezado {
+        flex-direction: column;
+    }
+
+    .navegacion-principal ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .seccion-principal {
+        padding: 25px;
+    }
+
+    .imagen-principal {
+        height: 200px;
+    }
 }
