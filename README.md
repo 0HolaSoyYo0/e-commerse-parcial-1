@@ -3,6 +3,55 @@
 
 Proyecto académico desarrollado por estudiantes del **Instituto Profesional DuocUC** para la asignatura **DESARROLLO FULLSTACK II_004D**.
 
+Corresponde a la **Evaluación 1 (30%)**, cuyo objetivo es desarrollar una tienda online básica utilizando **HTML, CSS y JavaScript**, sentando las bases para futuras etapas del proyecto.
+
+## 📌 Descripción
+
+El sistema está compuesto por dos áreas principales:
+
+- **Tienda:** sección pública para los clientes, con productos, usuarios, blogs, contacto y carrito de compras.
+- **Administrador:** sección destinada a la gestión de productos y usuarios.
+
+Actualmente el proyecto se encuentra en etapa de desarrollo **frontend**. No se dispone de un backend ni de una base de datos real. Para prototipar los datos se utiliza **JavaScript y JSON**.
+
+## 🛠️ Tecnologías
+
+- HTML5
+- CSS3
+- JavaScript
+- JSON
+- LocalStorage
+- Git y GitHub
+
+## 📁 Estructura
+
+```text
+e-commerse-parcial-1/
+├── index.html
+├── README.md
+├── estilos/
+│   ├── style-index.css
+│   ├── form-login.css
+│   └── form-registro.css
+├── paginas/
+│   ├── productos.html
+│   ├── formulario-login.html
+│   └── formulario-registro.html
+├── logica/
+│   └── catalogo.js
+└── db/
+    └── productos.json
+````
+
+## 🛒 Funcionalidades
+
+La Evaluación 1 contempla:
+
+* Navegación entre páginas.
+# 🏋️ E-Commerce de Productos Deportivos
+
+Proyecto académico desarrollado por estudiantes del **Instituto Profesional DuocUC** para la asignatura **DESARROLLO FULLSTACK II_004D**.
+
 El proyecto corresponde a la **Evaluación 1 (30%)** y consiste en el desarrollo de una tienda online básica utilizando **HTML, CSS y JavaScript**, estableciendo las bases para la evolución del sistema en futuras evaluaciones.
 
 ---
@@ -68,574 +117,59 @@ La página principal debe permitir la navegación hacia las distintas secciones 
 - Información principal de la tienda.
 - Imágenes.
 - Listado de productos destacados.
-- Nombre y precio de los productos.
-- Footer.
 
-### Registro de usuario
-
-Permite a los usuarios registrarse dentro de la plataforma mediante un formulario.
-
-La información ingresada debe ser validada mediante JavaScript.
-
-### Inicio de sesión
-
-Permite el ingreso de usuarios registrados.
-
-Debe incluir:
-
-- Logo de la empresa.
-- Nombre de la empresa.
-- Formulario de inicio de sesión.
-- Validaciones mediante JavaScript.
-
-### Nosotros
-
-Página destinada a explicar:
-
-- Información sobre la empresa.
-- Propósito de la tienda.
-- Información relacionada con los desarrolladores del proyecto.
-
-### Blogs
-
-Sección destinada a mostrar noticias, artículos o datos relacionados con la tienda y el mundo deportivo.
-
-Cada publicación debe incluir:
-
-- Imagen.
-- Título.
-- Descripción corta.
-
-Además, se deben desarrollar al menos **dos páginas de detalle de blogs**, incluyendo:
-
-- Imagen.
-- Título.
-- Descripción extensa.
-
-### Contacto
-
-Página que permitirá a los usuarios enviar mensajes mediante un formulario.
-
-El formulario deberá incorporar las validaciones correspondientes mediante JavaScript.
-
-### Productos
-
-Página destinada a mostrar el catálogo completo de productos disponibles.
-
-Cada producto debe presentar:
-
-- Imagen.
-- Nombre.
-- Precio.
-- Botón para añadir al carrito.
-
-Además, cada producto debe permitir acceder a una vista de **detalle del producto**.
-
-### Detalle del producto
-
-Vista donde se muestra información ampliada de un producto y donde el usuario podrá añadirlo al carrito.
-
-### Carrito de compras
-
-El carrito permitirá:
-
-- Añadir productos.
-- Visualizar productos seleccionados.
-- Aplicar las reglas de negocio definidas para el carrito.
-- Mantener la información almacenada mediante `localStorage`.
-
----
-
-# ⚙️ Sistema administrativo
-
-El sistema administrativo permitirá gestionar la información utilizada por la tienda.
-
-Esta sección está destinada principalmente a usuarios con permisos administrativos y deberá considerar un sistema de roles.
-
-## Vistas administrativas
-
-### Home administrativo
-
-La interfaz administrativa contará con:
-
-- Menú lateral o vertical.
-- Área principal de contenido.
-- Navegación hacia las diferentes funciones administrativas.
-
-El diseño visual del administrador es libre, siempre que exista un menú claramente visible.
-
-### Mantenedor de productos
-
-Debe permitir administrar los productos del sistema.
-
-Entre sus funcionalidades se contempla:
-
-- Listar productos.
-- Crear productos.
-- Editar productos.
-- Visualizar información de los productos.
-
-### Mantenedor de usuarios
-
-Debe permitir:
-
-- Listar usuarios.
-- Crear nuevos usuarios.
-- Editar información de usuarios.
-
----
-
-# ✅ Validaciones con JavaScript
-
-Una de las principales exigencias de esta evaluación es implementar validaciones utilizando JavaScript.
-
-Las validaciones deberán entregar mensajes claros al usuario y, cuando corresponda, realizarse en tiempo real.
-
-## Registro e inicio de sesión
-
-### Correo
-
-- Campo requerido según corresponda.
-- Máximo de 100 caracteres.
-- Solo se aceptan direcciones pertenecientes a:
-  - `@duoc.cl`
-  - `@profesor.duoc.cl`
-  - `@gmail.com`
-
-### Contraseña
-
-- Campo requerido.
-- Mínimo de 4 caracteres.
-- Máximo de 10 caracteres.
-
----
-
-## Formulario de contacto
-
-### Nombre
-
-- Campo requerido.
-- Máximo de 100 caracteres.
-
-### Correo
-
-- Máximo de 100 caracteres.
-- Solo se aceptan:
-  - `@duoc.cl`
-  - `@profesor.duoc.cl`
-  - `@gmail.com`
-
-### Comentario
-
-- Campo requerido.
-- Máximo de 500 caracteres.
-
----
-
-# 🛍️ Productos y carrito
-
-Los productos deben ser manejados mediante JavaScript.
-
-La evaluación considera:
-
-- Crear un arreglo de productos.
-- Mostrar los productos dinámicamente.
-- Filtrar o manipular los productos según corresponda.
-- Permitir agregar productos al carrito.
-- Definir las reglas de funcionamiento del carrito.
-- Guardar el carrito utilizando `localStorage`.
-
-En esta etapa, la información puede apoyarse en datos JSON como parte del prototipo.
-
-Ejemplo de producto:
-
-```json
-{
-  "id": 1,
-  "nombre": "Nombre del producto",
-  "precio": 22990,
-  "categoria": "fitness_musculacion"
-}
-````
-
----
-
-# 📦 Validaciones de productos
-
-Los formularios de productos deberán considerar las siguientes reglas.
-
-## Código del producto
-
-* Requerido.
-* Debe ser texto.
-* Mínimo de 3 caracteres.
-* Sin límite máximo establecido.
-
-## Nombre
-
-* Requerido.
-* Máximo de 100 caracteres.
-
-## Descripción
-
-* Opcional.
-* Máximo de 500 caracteres.
-
-## Precio
-
-* Requerido.
-* Valor mínimo de `0`.
-* Puede contener números decimales.
-* Un valor de `0` representa un producto gratuito.
-
-## Stock
-
-* Requerido.
-* Valor mínimo de `0`.
-* Debe contener solamente números enteros.
-
-## Stock crítico
-
-* Opcional.
-* Valor mínimo de `0`.
-* Debe contener solamente números enteros.
-* Se debe mostrar una alerta cuando el stock sea igual o inferior al stock crítico.
-
-## Categoría
-
-* Campo requerido.
-* Debe utilizar un elemento `select`.
-
-## Imagen
-
-* Campo opcional.
-
----
-
-# 👤 Validaciones de usuarios
-
-## RUN
-
-* Requerido.
-* Debe validarse que el RUN sea correcto.
-* No debe contener puntos ni guion.
-* Ejemplo:
-  `19011022K`
-* Mínimo de 7 caracteres.
-* Máximo de 9 caracteres.
-
-## Nombre
-
-* Requerido.
-* Máximo de 50 caracteres.
-
-## Apellidos
-
-* Requerido.
-* Máximo de 100 caracteres.
-
-## Correo
-
-* Requerido.
-* Máximo de 100 caracteres.
-* Solo se aceptan:
-
-  * `@duoc.cl`
-  * `@profesor.duoc.cl`
-  * `@gmail.com`
-
-## Fecha de nacimiento
-
-* Campo opcional.
-
-## Tipo de usuario
-
-Debe existir un selector que permita definir el perfil del usuario:
-
-* Administrador.
-* Cliente.
-* Vendedor.
-
-## Región y comuna
-
-Las regiones deberán obtenerse desde un arreglo de JavaScript.
-
-Al seleccionar una región, las comunas disponibles deberán actualizarse dinámicamente.
-
-## Dirección
-
-* Requerida.
-* Máximo de 300 caracteres.
-
----
-
-# 🔐 Roles del sistema
-
-El sistema considera tres perfiles principales.
-
-### Administrador
-
-Tiene acceso total al sistema.
-
-### Vendedor
-
-Puede:
-
-* Visualizar la lista de productos.
-* Visualizar el detalle de los productos.
-* Visualizar la lista de órdenes.
-* Visualizar el detalle de las órdenes.
-
-Las demás opciones administrativas no deben estar disponibles para este perfil.
-
-### Cliente
-
-Solo puede acceder a la parte pública de la tienda.
-
----
-
-# 🏗️ Arquitectura del proyecto
-
-El proyecto utiliza una estructura frontend separada por responsabilidades.
-
-```text
-HTML
- │
- ├── Estructura de las páginas
- │
- ▼
-CSS
- │
- ├── Diseño y estilos
- │
- ▼
-JavaScript
- │
- ├── Interactividad
- ├── Validaciones
- ├── Catálogo
- └── Carrito
- │
- ▼
-JSON / Datos locales
- │
- └── Información utilizada durante el prototipado
-```
-
-La arquitectura actual corresponde principalmente a un **frontend estático**, ya que aún no existe una capa backend ni una base de datos real.
-
----
-
-# 📁 Estructura actual del proyecto
-
-```text
-e-commerse-parcial-1/
-├── index.html
-├── README.md
-│
-├── estilos/
-│   ├── style-index.css
-│   ├── form-login.css
-│   └── form-registro.css
-│
-├── paginas/
-│   ├── productos.html
-│   ├── formulario-login.html
-│   └── formulario-registro.html
-│
-├── logica/
-│   └── catalogo.js
-│
-└── db/
-    └── productos.json
-```
-
-### `index.html`
-
-Contiene la página principal de la tienda.
-
-### `paginas/`
-
-Contiene las diferentes páginas HTML del proyecto.
-
-### `estilos/`
-
-Contiene las hojas de estilos CSS.
-
-### `logica/`
-
-Contiene los archivos JavaScript responsables de la lógica del sistema.
-
-### `db/`
-
-Contiene los archivos utilizados como fuente de datos durante el prototipado.
-
----
-
-# 🔄 Flujo del catálogo
-
-El funcionamiento esperado del catálogo es:
-
-```text
-productos.html
-       │
-       ▼
-  catalogo.js
-       │
-       ▼
-productos.json
-       │
-       ▼
-Obtención de productos
-       │
-       ▼
-Filtrado / procesamiento
-       │
-       ▼
-Creación de tarjetas
-       │
-       ▼
-Visualización en el catálogo
-```
-
----
-
-# 💾 Persistencia temporal
-
-Actualmente no se utiliza una base de datos.
-
-Los datos de productos pueden ser representados mediante archivos JSON durante el proceso de prototipado.
-
-Para el carrito de compras se utilizará `localStorage`, permitiendo conservar temporalmente la información del carrito en el navegador.
-
-En futuras etapas, estos mecanismos serán reemplazados o complementados por un **backend y una base de datos real**.
-
----
-
-# 🧩 Estado actual del proyecto
-
-El proyecto se encuentra en desarrollo y algunas funcionalidades todavía deben ser completadas para cumplir completamente con los requerimientos de la Evaluación 1.
-
-### Implementado / iniciado
-
-* [x] Estructura inicial del proyecto.
-* [x] Página principal.
-* [x] Formularios de inicio de sesión y registro.
-* [x] Hojas de estilos externas.
-* [x] Estructura inicial del catálogo.
-* [x] Archivo JSON para prototipado de productos.
-* [x] Lógica JavaScript inicial para el catálogo.
-
-### Pendiente
-
-* [ ] Completar la navegación entre todas las páginas.
-* [ ] Crear la página Nosotros.
-* [ ] Crear la sección de Blogs.
-* [ ] Crear los detalles de Blogs.
-* [ ] Crear la página de Contacto.
-* [ ] Completar la vista de Productos.
-* [ ] Crear el detalle de producto.
-* [ ] Implementar completamente el carrito.
-* [ ] Implementar `localStorage` para el carrito.
-* [ ] Completar las validaciones de formularios.
-* [ ] Implementar el sistema administrativo.
-* [ ] Crear el mantenedor de productos.
-* [ ] Crear el mantenedor de usuarios.
-* [ ] Implementar la lógica de roles.
-* [ ] Implementar la selección dinámica de regiones y comunas.
-* [ ] Incorporar las alertas de stock crítico.
-* [ ] Mejorar el diseño responsivo.
-* [ ] Completar la documentación técnica.
-* [ ] Preparar la integración futura con backend y base de datos.
-
----
-
-# 🚀 Ejecución del proyecto
-
-Actualmente el proyecto está compuesto por archivos HTML, CSS, JavaScript y JSON.
-
-Para visualizarlo de manera local se puede abrir:
-
-```text
-index.html
-```
-
-Durante el desarrollo se recomienda utilizar un servidor local, especialmente al trabajar con la carga de archivos JSON mediante JavaScript.
-
----
-
-# 🔧 Próximas etapas
-
-Este proyecto corresponde a la primera etapa de un sistema que será ampliado durante el semestre.
-
-La evolución esperada contempla:
-
-```text
-Frontend actual
-      │
-      ▼
-JavaScript y validaciones
-      │
-      ▼
-Backend
-      │
-      ▼
-API
-      │
-      ▼
-Base de datos
-      │
-      ▼
-Sistema Full Stack completo
-```
-
-Entre las futuras implementaciones se considera:
-
-* Backend.
-* Base de datos.
-* API.
-* Autenticación.
-* Gestión de usuarios.
-* Gestión de productos.
-* Gestión de órdenes.
-* Persistencia de información.
-* Control de permisos y roles.
-
----
-
-# 📚 Entregables de la Evaluación 1
-
-La entrega contempla:
-
-1. **Enlace público al repositorio de GitHub del proyecto frontend.**
-2. **Proyecto frontend comprimido.**
-3. **Documento ERS, versión 1.**
-
-Además, el proyecto deberá ser presentado ante el docente mediante:
-
-* 15 minutos de presentación por equipo.
-* 5 minutos de preguntas.
-* Demostración del desarrollo funcional.
-* Preguntas abiertas sobre las decisiones técnicas y los cambios realizados en GitHub.
-
----
-
-# 🌿 Control de versiones y trabajo colaborativo
-
-El proyecto utiliza **Git y GitHub** para el control de versiones y la colaboración entre los integrantes del equipo.
-
-Se busca mantener:
-
-* Commits claros y descriptivos.
-* Distribución equitativa de tareas.
-* Registro de cambios.
-* Trabajo colaborativo mediante el repositorio remoto.
-* Organización del código durante el desarrollo.
-
----
-
-# 👥 Equipo de desarrollo
-
-**Proyecto desarrollado por estudiantes del Instituto Profesional DuocUC.**
-
+* Catálogo de productos.
+* Detalle de productos.
+* Registro e inicio de sesión.
+* Página de contacto.
+* Blogs y detalles de blogs.
+* Carrito de compras.
+* Validaciones mediante JavaScript.
+* Uso de `localStorage`.
+* Mantenedor de productos y usuarios.
+* Roles de Administrador, Vendedor y Cliente.
+
+## ✅ Validaciones
+
+Se implementarán validaciones JavaScript para:
+
+* Correos `@duoc.cl`, `@profesor.duoc.cl` y `@gmail.com`.
+* Contraseñas.
+* RUN.
+* Nombre, apellidos y dirección.
+* Precio y stock de productos.
+* Categorías.
+* Región y comuna.
+* Formularios de contacto.
+
+## 📊 Estado actual
+
+El proyecto se encuentra **en desarrollo**.
+
+Actualmente existe una estructura inicial de páginas, estilos, lógica del catálogo y datos en JSON. Algunas funcionalidades de la evaluación todavía están pendientes, entre ellas:
+
+* Carrito y `localStorage`.
+* Validaciones completas.
+* Todas las vistas de la tienda.
+* Sistema administrativo.
+* Mantenedores de productos y usuarios.
+* Roles y permisos.
+* Integración futura con backend y base de datos.
+
+## 🎓 Contexto académico
+
+**Institución:** Instituto Profesional DuocUC
 **Asignatura:** DESARROLLO FULLSTACK II_004D
+**Evaluación:** 1 — 30%
+**Tipo:** Proyecto académico
+
+## 👥 Equipo
+
+Proyecto desarrollado por estudiantes de **DuocUC**.
+
+> Los integrantes del equipo y sus respectivos roles pueden agregarse aquí.
+
+```
+
+Esta versión conserva lo importante de la pauta, pero elimina explicaciones repetitivas y detalles que sería mejor dejar para el **ERS** o la documentación técnica.
+```
