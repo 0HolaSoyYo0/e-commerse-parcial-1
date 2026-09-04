@@ -1,45 +1,51 @@
-# E-Commerce de Productos Deportivos
+E-Commerce de Productos Deportivos
+Proyecto académico de una tienda online de productos deportivos desarrollado para la asignatura DESARROLLO FULLSTACK II_004D de DuocUC – Instituto Profesional.
+Estado del proyecto: En desarrollo — Evaluación 1
+Descripción
+Este proyecto tiene como objetivo desarrollar una tienda online básica utilizando HTML, CSS y JavaScript, estableciendo las bases para las siguientes evaluaciones de la asignatura.
+La solución contempla dos áreas principales: una tienda pública, orientada a los clientes, y un sistema administrativo, destinado a la gestión de productos y usuarios.
+En esta primera etapa el foco está puesto en la construcción de la interfaz web, navegación entre vistas, diseño responsivo, validaciones mediante JavaScript, manipulación dinámica de productos y uso de localStorage para el carrito de compras.
+Actualmente no existe un backend ni una base de datos real. Para prototipar la información de productos se utiliza un archivo JSON, complementado con estructuras de datos en JavaScript según los requerimientos de esta evaluación. Las reglas de negocio y decisiones implementadas durante esta etapa servirán como base para el desarrollo posterior de la solución Full Stack.
+Contexto académico
+Campo	Información
+Institución	DuocUC – Instituto Profesional
+Asignatura	DESARROLLO FULLSTACK II_004D
+Evaluación	Evaluación 1 — 30%
+Tipo de proyecto	Académico
+Modalidad	Desarrollo colaborativo
+Estado	En desarrollo
 
-Proyecto académico correspondiente a la asignatura **DESARROLLO FULLSTACK II_004D** de **DuocUC (Instituto Profesional)**.
-
-## Descripción
-
-Este proyecto consiste en el desarrollo de una página web tipo **e-commerce de productos deportivos**, construida como parte del proceso de aprendizaje de desarrollo Full Stack.
-
-La aplicación está orientada a presentar un catálogo de productos deportivos y establecer una primera estructura para una futura tienda en línea.
-
-Actualmente, el proyecto se encuentra en una etapa de **prototipado frontend**. La aplicación no cuenta todavía con un backend ni con una base de datos real. Para simular la fuente de información de los productos se utiliza un archivo **JSON**, que es leído y procesado mediante JavaScript.
-
-El objetivo de esta etapa es construir y organizar la interfaz, la navegación y la lógica inicial del catálogo, dejando preparada la estructura para futuras integraciones con un backend y una base de datos.
-
----
-
-## Información académica
-
-| Campo | Información |
-|---|---|
-| Institución | DuocUC |
-| Asignatura | DESARROLLO FULLSTACK II_004D |
-| Tipo de proyecto | Proyecto académico |
-| Área | Desarrollo Web / Full Stack |
-| Estado | En desarrollo |
-
----
-
-## Tecnologías utilizadas
-
-El proyecto está construido utilizando tecnologías web fundamentales:
-
-- **HTML5** — Estructura y contenido de las páginas.
-- **CSS3** — Diseño y estilos visuales.
-- **JavaScript** — Lógica e interacción de la aplicación.
-- **JSON** — Fuente de datos utilizada para prototipar el catálogo.
-
----
-
-## Estructura del proyecto
-
-```text
+Objetivos de la Evaluación 1
+La primera evaluación busca establecer las bases del proyecto mediante:
+·	Desarrollo de una tienda online básica con HTML, CSS y JavaScript.
+·	Construcción de una estructura HTML clara, semántica y navegable.
+·	Implementación de estilos externos, consistentes y responsivos.
+·	Desarrollo de validaciones y mensajes dinámicos mediante JavaScript.
+·	Implementación de elementos interactivos, formularios y navegación entre páginas.
+·	Uso de GitHub como repositorio remoto y herramienta de colaboración.
+Alcance del sistema
+Tienda pública
+La tienda corresponde a la cara visible del sistema y contempla las siguientes vistas:
+·	Home: presentación de la tienda, navegación, productos destacados y footer.
+·	Registro de usuario: formulario para registrar nuevos usuarios.
+·	Inicio de sesión: formulario de acceso de usuarios.
+·	Nosotros: información de la empresa y de los desarrolladores.
+·	Blogs: listado de noticias o contenidos relacionados con la tienda.
+·	Detalle de blogs: páginas con el contenido completo de dos publicaciones.
+·	Contacto: formulario para enviar mensajes a la tienda.
+·	Productos: listado de productos disponibles, con imagen, nombre, precio y opción para añadir al carrito.
+·	Detalle de producto: información detallada de un producto y opción para añadirlo al carrito.
+·	Carrito de compras: gestión de productos seleccionados y persistencia mediante localStorage.
+Sistema administrativo
+El sistema administrativo está orientado a la gestión interna de la tienda y contempla:
+·	Home administrativo: panel con menú de navegación y contenido principal.
+·	Mantenedor de productos: listado y gestión de productos.
+·	Mantenedor de usuarios: listado y gestión de usuarios.
+·	Crear y editar productos: formulario para administrar la información de cada producto.
+·	Crear y editar usuarios: formulario para administrar la información de los usuarios.
+·	Roles del sistema: Administrador, Vendedor y Cliente.
+Arquitectura y organización
+El proyecto se organiza separando las responsabilidades de presentación, estilos, lógica y datos.
 e-commerse-parcial-1/
 ├── index.html
 ├── README.md
@@ -59,269 +65,184 @@ e-commerse-parcial-1/
 │
 └── db/
     └── productos.json
-````
 
-### Descripción de las carpetas
-
-#### `index.html`
-
-Página principal del sitio. Contiene la estructura inicial de la tienda y sus principales elementos de navegación.
-
-#### `paginas/`
-
-Contiene las páginas secundarias del proyecto:
-
-* `productos.html`: página destinada a la visualización del catálogo.
-* `formulario-login.html`: formulario de inicio de sesión.
-* `formulario-registro.html`: formulario de registro de usuarios.
-
-#### `estilos/`
-
-Contiene los archivos CSS utilizados para definir la apariencia de las diferentes páginas:
-
-* `style-index.css`: estilos de la página principal.
-* `form-login.css`: estilos del formulario de inicio de sesión.
-* `form-registro.css`: estilos del formulario de registro.
-
-#### `logica/`
-
-Contiene la lógica JavaScript relacionada con el funcionamiento del catálogo:
-
-* `catalogo.js`: encargado de obtener, filtrar y mostrar los productos dinámicamente.
-
-#### `db/`
-
-Contiene los datos utilizados durante la etapa de prototipado:
-
-* `productos.json`: archivo JSON que representa temporalmente la información de los productos.
-
----
-
-## Arquitectura
-
-La aplicación se organiza separando las principales responsabilidades del frontend:
-
-```text
-┌─────────────────────┐
-│       HTML          │
-│   Presentación      │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│        CSS          │
-│   Estilos y diseño  │
-└─────────────────────┘
-
-┌─────────────────────┐
-│     JavaScript      │
-│ Lógica e interacción│
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│       JSON          │
-│ Datos del catálogo  │
-└─────────────────────┘
-```
-
-Actualmente, esta arquitectura corresponde principalmente a un **frontend estático**, donde JavaScript utiliza el archivo JSON como fuente local de información.
-
----
-
-## Funcionamiento del catálogo
-
-El flujo esperado para la carga del catálogo es:
-
-```text
-productos.html
-       │
-       ▼
- catalogo.js
-       │
-       ▼
-productos.json
-       │
-       ▼
-Obtención de productos
-       │
-       ▼
-Filtrado por categoría
-       │
-       ▼
-Creación dinámica de tarjetas
-       │
-       ▼
-Visualización del catálogo
-```
-
-Los productos se representan mediante objetos JSON.
-
-Ejemplo:
-
-```json
-{
-    "id": 1,
-    "nombre": "Nombre del producto",
-    "precio": 22990,
-    "categoria": "fitness_musculacion"
-}
-```
-
-Este mecanismo permite prototipar la gestión de productos sin necesidad de implementar todavía una base de datos o un servidor backend.
-
----
-
-## Ejecución del proyecto
-
-Como el proyecto está construido con HTML, CSS, JavaScript y JSON, no requiere actualmente la instalación de dependencias externas.
-
-Para ejecutarlo se debe abrir el archivo:
-
-```text
-index.html
-```
-
-También se recomienda utilizar un servidor local para trabajar con mayor facilidad durante el desarrollo, especialmente al cargar archivos JSON desde JavaScript.
-
----
-
-## Estado actual
-
-El proyecto se encuentra **en desarrollo**.
-
-La estructura general ya separa presentación, estilos, lógica y datos, pero todavía existen funcionalidades y ajustes pendientes para completar la integración del sistema.
-
-### Tareas pendientes
-
-* [ ] Crear un archivo CSS exclusivo para la página de productos.
-* [ ] Corregir la ruta utilizada para acceder a `productos.json`.
-* [ ] Corregir la inserción de las tarjetas de productos para utilizar el contenedor `#catalogo`.
-* [ ] Unificar las categorías utilizadas en HTML y JSON.
-* [ ] Implementar correctamente el filtro de categoría `todos`.
-* [ ] Completar los enlaces de navegación entre las páginas.
-* [ ] Implementar el carrito de compras.
-* [ ] Agregar funcionalidad a los botones de los productos.
-* [ ] Incorporar validaciones en los formularios.
-* [ ] Completar el comportamiento de inicio de sesión y registro.
-* [ ] Reemplazar posteriormente el archivo JSON por una base de datos real.
-* [ ] Incorporar un backend para gestionar la información y las operaciones de la aplicación.
-
----
-
-## Limitaciones actuales
-
-En esta versión no existe:
-
-* Backend.
-* Base de datos real.
-* Persistencia de usuarios.
-* Sistema de autenticación funcional.
-* Carrito de compras completamente implementado.
-* Gestión de productos mediante un servidor.
-
-Por lo tanto, el archivo `productos.json` debe considerarse una **solución temporal de prototipado** y no una base de datos definitiva.
-
----
-
-## Próximas etapas
-
-La evolución esperada del proyecto contempla avanzar progresivamente desde el prototipo actual hacia una aplicación Full Stack.
-
-Entre las futuras mejoras se considera:
-
-1. Implementación de un backend.
-2. Incorporación de una base de datos.
-3. Conexión entre frontend y backend mediante una API.
-4. Gestión de usuarios y autenticación.
-5. Implementación completa del carrito de compras.
-6. Persistencia de productos y pedidos.
-7. Validación y manejo de datos desde el servidor.
-
----
-
-## Contexto del proyecto
-
-Este repositorio corresponde a un **proyecto académico desarrollado por estudiantes de DuocUC** para la asignatura:
-
-**DESARROLLO FULLSTACK II_004D**
-
-El proyecto tiene como finalidad aplicar los conocimientos adquiridos durante la asignatura en el desarrollo progresivo de una aplicación web Full Stack.
-
----
-
-## Licencia
-
-Este proyecto fue desarrollado con fines **académicos y educativos**.
-
-No corresponde actualmente a un producto comercial.
-
-```
-
-Esta versión sigue una estructura más apropiada para un repositorio: identificación del proyecto, contexto académico, descripción, tecnologías, estructura, funcionamiento, ejecución, estado, limitaciones y evolución futura. Ese enfoque coincide con las recomendaciones habituales para README de proyectos, que priorizan explicar qué contiene el proyecto, para qué sirve, cómo utilizarlo y cuál es su estado. :contentReference[oaicite:1]{index=1}
-
-También corregí el enfoque de la frase **“la base de datos actualmente es inexistente”**: en documentación técnica queda más claro decir que *no existe una base de datos real y que JSON se utiliza como fuente de datos temporal para prototipado*.
-```
-
-[1]: https://docs.github.com/en/repositories/creating-and-managing-repositories/best-practices-for-repositories?utm_source=chatgpt.com "Best practices for repositories - GitHub Docs"
-# E-Commerce de Productos Deportivos
-
-Proyecto académico correspondiente a la asignatura **DESARROLLO FULLSTACK II_004D** de **DuocUC (Instituto Profesional)**.
-
-## Descripción
-
-Este proyecto consiste en el desarrollo de una página web tipo **e-commerce de productos deportivos**, construida como parte del proceso de aprendizaje de desarrollo Full Stack.
-
-La aplicación está orientada a presentar un catálogo de productos deportivos y establecer una primera estructura para una futura tienda en línea.
-
-Actualmente, el proyecto se encuentra en una etapa de **prototipado frontend**. La aplicación no cuenta todavía con un backend ni con una base de datos real. Para simular la fuente de información de los productos se utiliza un archivo **JSON**, que es leído y procesado mediante JavaScript.
-
-El objetivo de esta etapa es construir y organizar la interfaz, la navegación y la lógica inicial del catálogo, dejando preparada la estructura para futuras integraciones con un backend y una base de datos.
-
----
-
-## Información académica
-
-| Campo | Información |
-|---|---|
-| Institución | DuocUC |
-| Asignatura | DESARROLLO FULLSTACK II_004D |
-| Tipo de proyecto | Proyecto académico |
-| Área | Desarrollo Web / Full Stack |
-| Estado | En desarrollo |
-
----
-
-## Tecnologías utilizadas
-
-El proyecto está construido utilizando tecnologías web fundamentales:
-
-- **HTML5** — Estructura y contenido de las páginas.
-- **CSS3** — Diseño y estilos visuales.
-- **JavaScript** — Lógica e interacción de la aplicación.
-- **JSON** — Fuente de datos utilizada para prototipar el catálogo.
-
----
-
-## Estructura del proyecto
-
-```text
-e-commerse-parcial-1/
-├── index.html
-├── README.md
-│
-├── estilos/
-│   ├── style-index.css
-│   ├── form-login.css
-│   └── form-registro.css
-│
-├── paginas/
-│   ├── productos.html
-│   ├── formulario-login.html
-│   └── formulario-registro.html
-│
-├── logica/
-│   └── catalogo.js
-│
-└── db/
-    └── productos.json
+Capas principales
+Presentación — HTML
+
+Define la estructura de las páginas, formularios, menús, enlaces, botones y contenedores de contenido.
+Estilos — CSS
+
+Define la apariencia visual de las páginas y busca mantener una presentación consistente y adaptable a distintos tamaños de pantalla.
+Lógica — JavaScript
+
+Gestiona la interacción del usuario, las validaciones de formularios, la manipulación de productos, el filtrado del catálogo y el funcionamiento del carrito.
+Datos — JSON / JavaScript
+
+productos.json se utiliza como fuente de datos para prototipar el catálogo. Para los requerimientos de esta evaluación también se contempla el uso de arreglos de productos en JavaScript para su representación dinámica.
+Tecnologías
+·	HTML5
+·	CSS3
+·	JavaScript
+·	JSON
+·	LocalStorage
+·	Git y GitHub
+Validaciones de formularios
+Las validaciones son parte fundamental de la Evaluación 1. JavaScript debe proporcionar comprobaciones y mensajes de error dinámicos para mejorar la experiencia del usuario.
+Registro e inicio de sesión
+Entre las reglas contempladas se encuentran:
+·	Correo obligatorio en los formularios donde corresponda.
+·	Longitud máxima de 100 caracteres para el correo.
+·	Dominios permitidos: @duoc.cl, @profesor.duoc.cl y @gmail.com.
+·	Contraseña obligatoria en el inicio de sesión.
+·	Contraseña entre 4 y 10 caracteres.
+Formulario de contacto
+·	Nombre obligatorio.
+·	Nombre con un máximo de 100 caracteres.
+·	Correo con un máximo de 100 caracteres.
+·	Validación de dominios permitidos.
+·	Comentario obligatorio.
+·	Comentario con un máximo de 500 caracteres.
+Productos del sistema administrativo
+Se consideran las siguientes validaciones:
+Campo	Reglas principales
+Código	Obligatorio, texto, mínimo 3 caracteres
+Nombre	Obligatorio, máximo 100 caracteres
+Descripción	Opcional, máximo 500 caracteres
+Precio	Obligatorio, mínimo 0, permite decimales
+Stock	Obligatorio, entero, mínimo 0
+Stock crítico	Opcional, entero, mínimo 0
+Categoría	Obligatoria, selección mediante select
+Imagen	Opcional
+
+Usuarios del sistema administrativo
+Campo	Reglas principales
+RUN	Obligatorio, sin puntos ni guion, entre 7 y 9 caracteres y con validación de formato
+Nombre	Obligatorio, máximo 50 caracteres
+Apellidos	Obligatorio, máximo 100 caracteres
+Correo	Obligatorio, máximo 100 caracteres y con dominios permitidos
+Fecha de nacimiento	Opcional
+Tipo de usuario	Selección de perfil
+Región	Selección desde un arreglo en JavaScript
+Comuna	Debe actualizarse según la región seleccionada
+Dirección	Obligatoria, máximo 300 caracteres
+
+Carrito de compras
+El carrito forma parte de la funcionalidad principal de la tienda.
+Su implementación contempla:
+·	Listar productos mediante JavaScript.
+·	Utilizar un arreglo de productos.
+·	Mostrar productos dinámicamente.
+·	Añadir productos al carrito.
+·	Definir reglas de negocio para su funcionamiento.
+·	Guardar la información del carrito utilizando localStorage.
+El flujo esperado es:
+Productos
+   ↓
+Seleccionar producto
+   ↓
+Añadir al carrito
+   ↓
+Actualizar carrito
+   ↓
+Guardar en LocalStorage
+   ↓
+Recuperar carrito al volver a cargar la página
+
+Roles del sistema
+El proyecto contempla tres perfiles principales:
+Administrador
+Tiene acceso total al sistema administrativo y puede gestionar los recursos disponibles.
+Vendedor
+Puede:
+·	Visualizar el listado de productos.
+·	Visualizar el detalle de productos.
+·	Visualizar el listado de órdenes.
+·	Visualizar el detalle de órdenes.
+Las demás opciones administrativas no deben estar disponibles para este perfil.
+Cliente
+Tiene acceso a la tienda pública.
+Flujo general
+                    ┌───────────────┐
+                    │     INICIO    │
+                    └───────┬───────┘
+                            │
+             ┌──────────────┴──────────────┐
+             │                             │
+             ▼                             ▼
+     ┌───────────────┐             ┌────────────────┐
+     │     TIENDA    │             │ ADMINISTRACIÓN │
+     └───────┬───────┘             └───────┬────────┘
+             │                             │
+     ┌───────┼─────────┐           ┌───────┴────────┐
+     │       │         │           │                │
+     ▼       ▼         ▼           ▼                ▼
+  Productos Login   Registro   Productos         Usuarios
+     │
+     ▼
+ Detalle
+     │
+     ▼
+ Carrito
+
+Estado actual
+El proyecto se encuentra en una etapa de desarrollo correspondiente a la Evaluación 1. La estructura inicial del frontend se encuentra separada por responsabilidades, pero todavía existen funcionalidades que deben implementarse o completarse para alcanzar todo el alcance solicitado.
+Implementado o iniciado
+·	Estructura inicial del proyecto.
+·	Página principal.
+·	Formularios de inicio de sesión y registro.
+·	Página inicial del catálogo.
+·	Separación inicial entre HTML, CSS y JavaScript.
+·	Archivo JSON para prototipado de productos.
+Pendiente o en desarrollo
+·	Completar la navegación entre todas las vistas.
+·	Implementar página Nosotros.
+·	Implementar Blogs y sus dos vistas de detalle.
+·	Implementar formulario de Contacto.
+·	Completar listado y detalle de productos.
+·	Implementar completamente el carrito y localStorage.
+·	Completar validaciones JavaScript en tiempo real.
+·	Implementar las vistas del sistema administrativo.
+·	Implementar mantenedores de productos y usuarios.
+·	Implementar selección dinámica de región y comuna.
+·	Completar la lógica de roles y restricciones de acceso.
+·	Revisar consistencia de categorías entre HTML, JavaScript y JSON.
+·	Completar estilos responsivos de todas las vistas.
+Datos y persistencia
+En esta primera etapa no existe una base de datos real ni un backend.
+El archivo:
+/db/productos.json
+
+se utiliza como apoyo para el prototipado de los datos del catálogo.
+El carrito utiliza localStorage como mecanismo de almacenamiento del lado del navegador. Esto permite conservar información del carrito entre cargas de la página sin necesidad de una base de datos.
+La implementación de un backend, una API y una base de datos se contempla para etapas posteriores del proyecto.
+Ejecución del proyecto
+Este proyecto está compuesto actualmente por archivos HTML, CSS, JavaScript y JSON, por lo que no requiere un proceso de instalación de dependencias de Node.js.
+Para ejecutar el proyecto durante el desarrollo se recomienda utilizar un servidor local. Luego se debe acceder a index.html desde el navegador y recorrer las vistas disponibles.
+Control de versiones y trabajo colaborativo
+El proyecto utiliza Git y GitHub como herramientas de control de versiones y colaboración.
+Se busca mantener un historial de cambios claro mediante commits descriptivos y distribuir las tareas entre los integrantes del equipo de manera equitativa.
+El repositorio debe permitir identificar el avance realizado por cada integrante y facilitar la integración de los distintos componentes del proyecto.
+Entregables de la Evaluación 1
+De acuerdo con las instrucciones de la asignatura, la entrega considera:
+·	Enlace público al repositorio de GitHub del frontend.
+·	Proyecto frontend comprimido.
+·	Documento ERS, correspondiente a la propuesta previa en su versión inicial.
+·	Presentación del caso y del desarrollo funcional.
+·	Participación de cada integrante en la ronda de preguntas técnicas.
+Proyección del proyecto
+La Evaluación 1 establece las bases para las siguientes etapas del desarrollo. La evolución prevista es pasar desde este prototipo frontend hacia una solución Full Stack completa, incorporando progresivamente:
+·	Backend.
+·	API para comunicación entre frontend y servidor.
+·	Base de datos real.
+·	Persistencia de usuarios, productos, órdenes y demás información.
+·	Autenticación y control de acceso basado en roles.
+·	Gestión completa de productos y usuarios.
+·	Procesamiento de órdenes y compras.
+Documentación relacionada
+·	ERS: documento de especificación de requisitos del sistema, desarrollado progresivamente durante el semestre.
+·	Repositorio GitHub: fuente principal del código y seguimiento del desarrollo.
+Autores
+Proyecto desarrollado por estudiantes de DuocUC – Instituto Profesional para la asignatura DESARROLLO FULLSTACK II_004D.
+Los nombres de los integrantes del equipo pueden agregarse en esta sección.
+Licencia
+Este proyecto ha sido desarrollado con fines académicos y educativos en el contexto de la asignatura DESARROLLO FULLSTACK II_004D.
