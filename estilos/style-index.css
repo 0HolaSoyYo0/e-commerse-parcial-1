@@ -111,8 +111,16 @@ header {
 .caja-logo {
     width: 20px;
     height: 20px;
-    background-color: var(--accent);
+    overflow: hidden;
+    background-color: white;
     border: 2px solid var(--primary);
+}
+
+.caja-logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .navegacion-principal ul {

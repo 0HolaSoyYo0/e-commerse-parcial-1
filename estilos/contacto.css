@@ -1,0 +1,162 @@
+:root {
+    --fondo: rgb(100, 200, 255);
+    --primary: rgb(0, 0, 0);
+    --secondary: rgb(255, 150, 100);
+    --accent: #ed4643;
+    --shadow: 12px 10px 0 var(--primary);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: var(--fondo);
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: min(700px, 100%);
+    padding: 34px;
+    background-color: var(--secondary);
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.logo-sitio {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 auto 18px;
+    border: 2px solid var(--primary);
+}
+
+h1 {
+    margin-bottom: 28px;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h1::before {
+    content: '✉';
+    display: block;
+    margin-bottom: 8px;
+    color: var(--accent);
+    font-size: 2rem;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.entrada {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.correo,
+.direccion,
+.boton-envio {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    font: inherit;
+    outline: none;
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 4px 4px 0 var(--primary);
+}
+
+.boton-envio {
+    text-align: right;
+}
+
+button {
+    padding: 10px 18px;
+    background-color: var(--accent);
+    color: white;
+    border: 2px solid var(--primary);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    box-shadow: 4px 4px 0 var(--primary);
+    transform: translate(-2px, -2px);
+}
+
+.contenedor > p {
+    margin-top: 28px;
+    text-align: center;
+}
+
+a {
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        padding: 24px 16px;
+    }
+
+    .contenedor {
+        padding: 24px 20px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .correo,
+    .direccion,
+    .boton-envio {
+        grid-column: auto;
+    }
+
+    .boton-envio button {
+        width: 100%;
+    }
+}

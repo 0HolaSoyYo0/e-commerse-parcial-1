@@ -1,0 +1,152 @@
+:root {
+    --fondo: rgb(100, 200, 255);
+    --primary: rgb(0, 0, 0);
+    --secondary: rgb(255, 150, 100);
+    --accent: #ed4643;
+    --shadow: 12px 10px 0 var(--primary);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--fondo);
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px max(20px, calc((100% - 1160px) / 2));
+    margin-bottom: 52px;
+    background-color: var(--secondary);
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow);
+}
+
+header > a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+header > a::before {
+    content: '';
+    width: 34px;
+    height: 34px;
+    background: white url('../imagenes/imageneslogo.png') center / cover no-repeat;
+    border: 2px solid var(--primary);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+main {
+    width: min(900px, calc(100% - 40px));
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 28px;
+    font-size: clamp(1.8rem, 5vw, 2.7rem);
+    text-transform: uppercase;
+}
+
+main > section {
+    position: relative;
+    padding: 34px;
+    background-color: var(--secondary);
+    border: 2px solid var(--primary);
+    box-shadow: var(--shadow);
+}
+
+main > section::before {
+    content: 'NEO / EQUIPAMIENTO / COMUNIDAD';
+    display: block;
+    margin-bottom: 26px;
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+h2 {
+    margin-bottom: 18px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+section p {
+    max-width: 680px;
+    margin-bottom: 14px;
+    font-size: 1rem;
+}
+
+section p:last-child {
+    margin-bottom: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+footer {
+    width: min(900px, calc(100% - 40px));
+    margin: 58px auto 0;
+    padding: 20px 0;
+    border-top: 2px solid var(--primary);
+}
+
+footer a {
+    display: inline-block;
+    padding: 9px 13px;
+    background-color: var(--accent);
+    color: white;
+    border: 2px solid var(--primary);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 var(--primary);
+    transform: translate(-2px, -2px);
+}
+
+@media (max-width: 650px) {
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
+
+    nav {
+        gap: 10px 16px;
+    }
+
+    main > section {
+        padding: 24px 20px;
+    }
+}

@@ -45,6 +45,16 @@ header {
     box-shadow: var(--shadow);
 }
 
+header > a:first-child::before {
+    content: '';
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+    background: white url('../imagenes/imageneslogo.png') center / cover no-repeat;
+    border: 2px solid var(--primary);
+}
+
 header nav {
     display: flex;
     flex-wrap: wrap;

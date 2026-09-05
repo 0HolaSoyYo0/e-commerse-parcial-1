@@ -32,6 +32,15 @@ body {
     padding: 40px 30px;
 }
 
+.logo-sitio {
+    display: block;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin: 0 auto 18px;
+    border: 2px solid var(--primary);
+}
+
 h1 {
     margin: 30px;
     text-align: center;
