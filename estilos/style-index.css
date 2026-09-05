@@ -1,6 +1,3 @@
-/* =========================================================
-   VARIABLES Y CONFIGURACIÓN GLOBAL
-   ========================================================= */
 
 :root {
     --fondo: rgb(100, 200, 255);
@@ -142,6 +139,10 @@ header {
     gap: 5px;
 }
 
+.area-carrito a {
+    white-space: nowrap;
+}
+
 
 /* =========================================================
    BARRA SUPERIOR / LOGIN
@@ -230,6 +231,78 @@ header {
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-bottom: 40px;
+}
+
+.encabezado-seccion {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.etiqueta-seccion {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.encabezado-seccion h2 {
+    font-size: 1.5rem;
+}
+
+.boton-secundario,
+.boton-agregar,
+.boton-detalle {
+    display: inline-block;
+    border: 2px solid var(--primary);
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-secundario,
+.boton-agregar {
+    background-color: var(--accent);
+    color: white;
+}
+
+.boton-secundario:hover,
+.boton-agregar:hover,
+.boton-detalle:hover {
+    color: white;
+    box-shadow: 3px 3px 0 var(--primary);
+    transform: translate(-2px, -2px);
+    text-decoration: none;
+}
+
+.boton-agregar:disabled {
+    background-color: var(--primary);
+    cursor: default;
+}
+
+.boton-detalle {
+    background-color: transparent;
+}
+
+.boton-detalle:hover {
+    background-color: var(--primary);
+}
+
+.acciones-producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.estado-catalogo {
+    min-height: 24px;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
 }
 
 .tarjeta-producto {
@@ -420,6 +493,11 @@ footer {
 
     .seccion-principal {
         padding: 25px;
+    }
+
+    .encabezado-seccion {
+        align-items: flex-start;
+        flex-direction: column;
     }
 
     .imagen-principal {
