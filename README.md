@@ -45,6 +45,18 @@ e-commerse-parcial-1/
 
 ## 🛒 Funcionalidades
 
+## ▶️ Ejecutar el catálogo
+
+El catálogo carga los productos desde `db/productos.json`, por lo que debe abrirse mediante un servidor local. No se debe abrir `paginas/productos.html` directamente con `file://`, ya que el navegador bloquea la lectura del JSON.
+
+Desde la carpeta raíz del proyecto, ejecuta:
+
+```bash
+python3 -m http.server 8000
+```
+
+Luego visita <http://localhost:8000/paginas/productos.html>.
+
 La Evaluación 1 contempla:
 
 * Navegación entre páginas.

@@ -1,11 +1,14 @@
-const selector = document.querySelector("#categorias");
 
+const selector = document.querySelector("#categorias");
 const catalogo = document.querySelector("#catalogo");
 
 async function iniciarCatalogo() {
-    const respuesta = await fetch("./db/productos.json");
-
-    const productos = await respuesta.json();
+    try {
+        const respuesta = await fetch("../db/productos.json");
+        if (!respuesta.ok) {
+            throw new Error(`No se pudo cargar productos.json (${respuesta.status})`);
+        }
+        const productos = await respuesta.json();
 
     function crearCatalogo(categoria) {
         if (!catalogo || !selector) {
@@ -14,7 +17,9 @@ async function iniciarCatalogo() {
 
         catalogo.innerHTML = "";
 
-        const productosFiltrados = productos.filter(producto => producto.categoria === categoria);
+        const productosFiltrados = categoria === "todos"
+            ? productos
+            : productos.filter(producto => producto.categoria === categoria);
 
         for (const producto of productosFiltrados) {
             const tarjeta = document.createElement("article");
@@ -26,16 +31,29 @@ async function iniciarCatalogo() {
                 <p>$${producto.precio}</p>
             `;
 
-            selector.appendChild(tarjeta);
+            catalogo.appendChild(tarjeta);
         }
-
-        selector.addEventListener("change", () => {
-            crearCatalogo(selector.value);
-        });
     }
 
-    if (selector) {
-        crearCatalogo(selector.value);
+        if (selector) {
+            selector.addEventListener("change", () => {
+                crearCatalogo(selector.value);
+            });
+
+            crearCatalogo(selector.value);
+        }
+    
+    } catch (error) {
+        if (catalogo) {
+            catalogo.innerHTML = `
+                <p class="mensaje-error">
+                    No se pudieron cargar los productos.
+                    Abre el proyecto mediante un servidor local (por ejemplo, Live Server).
+                </p>
+            `;
+        }
+
+        console.error("Error al iniciar el catálogo:", error);
     }
 }
 

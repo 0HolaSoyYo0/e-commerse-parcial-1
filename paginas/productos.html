@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html lang="en-CL">
+<html lang="es-CL">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Productos</title>
+    <link rel="stylesheet" href="../estilos/style.css">
 </head>
 
 <body>
-    <nav>
-        <label for="categorias">Categorias:</label>\
+    <header>
+        <a href="../index.html">NEO-Deportes</a>
+        <a href="carrito.html">Carrito</a>
+    </header>
 
-        <select name="categorias" id="categorias">
+    <nav>
+
+        <label class="selector" for="categorias">Categorías:</label>
+        <select class="selector" name="categorias" id="categorias">
             <option value="todos">todos</option>
-            <option value="fitness">Fitness y Musculación</option>
-            <option value="atletismo">Running y Atletismo</option>
-            <option value="depo-equipo">Deportes de Equipo</option>
-            <option value="depo-raqueta">Deportes de Raqueta</option>
-            <option value="depo-combate">Deportes de Combate</option>
+            <option value="fitness_musculacion">Fitness y Musculación</option>
+            <option value="running_atletismo">Running y Atletismo</option>
+            <option value="deportes_equipo">Deportes de Equipo</option>
+            <option value="deportes_raqueta">Deportes de Raqueta</option>
+            <option value="deportes_combate">Deportes de Combate</option>
             <option value="ciclismo">Ciclismo</option>
-            <option value="outdoor">Outdoor y Trekking</option>
-            <option value="nutricion">Nutrición y Bienestar</option>
+            <option value="outdoor_trekking">Outdoor y Trekking</option>
+            <option value="nutricion_bienestar">Nutrición y Bienestar</option>
         </select>
     </nav>
 
-    <main id="catalogo"></main>
+    <main class="contenedor-catalogo" id="catalogo">
+    </main>
 
-    <script src="/logica/catalogo.js"></script>
+    <script src="../logica/catalogo.js"></script>
 </body>
 
 </html>

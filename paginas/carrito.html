@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de compras</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">NEO-Deportes</a>
+        <nav>
+            <a href="productos.html">Productos</a>
+            <a href="../index.html">Inicio</a>
+            <a href="formulario-login.html">Iniciar sesión</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Carrito de compras</h1>
+        <section aria-labelledby="productos-carrito">
+            <h2 id="productos-carrito">Productos seleccionados</h2>
+            <p id="mensaje-carrito">Cargando carrito...</p>
+            <ul id="lista-carrito"></ul>
+        </section>
+        <section aria-labelledby="resumen-carrito">
+            <h2 id="resumen-carrito">Resumen</h2>
+            <p>Total: <strong id="total-carrito">$0</strong></p>
+            <button type="button">Continuar compra</button>
+        </section>
+    </main>
+
+    <footer>
+        <a href="productos.html">Seguir comprando</a>
+    </footer>
+
+    <script src="../logica/carrito.js"></script>
+</body>
+
+</html>

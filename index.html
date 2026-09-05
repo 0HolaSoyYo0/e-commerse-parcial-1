@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEO-Deportes - Inicio</title>
-    <link rel="stylesheet" href="estilos/style-index.css">
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 
 <body>
@@ -18,15 +18,17 @@
             </div>
             <nav class="navegacion-principal">
                 <ul>
-                    <li><a href="#">Home</a> |</li>
-                    <li><a href="#">Productos</a> |</li>
-                    <li><a href="#">Nosotros</a> |</li>
-                    <li><a href="#">Blogs</a> |</li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="index.html">Inicio</a> |</li>
+                    <li><a href="paginas/productos.html">Productos</a> |</li>
+                    <li><a href="paginas/nosotros.html">Nosotros</a> |</li>
+                    <li><a href="paginas/blogs.html">Blogs</a> |</li>
+                    <li><a href="paginas/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
             <div class="area-carrito">
-                🛒 Carrito(0)
+                <a href="paginas/carrito.html" aria-label="Ver carrito de compras">
+                    🛒 Carrito (<span id="contador-carrito">0</span>)
+                </a>
             </div>
         </div>
     </header>
@@ -45,77 +47,23 @@
                         Encuentra los mejores implementos para deportes de contacto, acuáticos, extremos, aéreos y más.
                         Equípate como un profesional ahora mismo.
                     </p>
-                    <button class="boton-principal">⬇ Ver productos</button>
+                    <a class="boton-principal" href="paginas/productos.html">⬇ Ver productos</a>
                 </div>
-                <div class="imagen-principal imagen-placeholder"></div>
+                <div class="imagen-principal imagen-placeholder">
+                    <span>Equipamiento deportivo</span>
+                </div>
             </section>
 
-            <section class="cuadricula-productos">
-                <div class="tarjeta-producto">
-                    <div class="imagen-placeholder"></div>
-                    <a href="#" class="titulo-producto">Título Producto</a>
-                    <div class="detalles-producto">
-                        <span>Atributos</span>
-                        <span class="precio-producto">$00.00</span>
+            <section aria-labelledby="titulo-destacados">
+                <div class="encabezado-seccion">
+                    <div>
+                        <p class="etiqueta-seccion">Selección de la tienda</p>
+                        <h2 id="titulo-destacados">Productos destacados</h2>
                     </div>
+                    <a class="boton-secundario" href="paginas/productos.html">Ver catálogo completo</a>
                 </div>
-                <div class="tarjeta-producto">
-                    <div class="imagen-placeholder"></div>
-                    <a href="#" class="titulo-producto">Rodilleras Phantom Athletics Riot Pro</a>
-                    <div class="detalles-producto">
-                        <span>Attributes</span>
-                        <span class="precio-producto">$50,000</span>
-                    </div>
-                </div>
-                <div class="tarjeta-producto">
-                    <div class="imagen-placeholder"></div>
-                    <a href="#" class="titulo-producto">Guantillas Venom MMA 4 a 8 oz </a>
-                    <div class="detalles-producto">
-                        <span>Attributes</span>
-                        <span class="precio-producto">$49,990</span>
-                    </div>
-                </div>
-                <div class="tarjeta-producto">
-                    <div class="imagen-placeholder"></div>
-                    <a href="#" class="titulo-producto">Rashguard Manga Larga, Tallas: (S, M, L, XL) </a>
-                    <div class="detalles-producto">
-                        <span>Attributes</span>
-                        <span class="precio-producto">$42,990</span>
-                    </div>
-                </div>
-
-                <div class="tarjeta-producto">
-                    <div class="imagen-placeholder"></div>
-                    <a href="#" class="titulo-producto">Espinillera MMA Talla M</a>
-                    <div class="detalles-producto">
-                        <span>Attributes</span>
-                        <span class="precio-producto">$30,790</span>
-                    </div>
-                </div>
-                <div class="tarjeta-producto">
-                    <div class="imagen-placeholder"></div>
-                    <a href="#" class="titulo-producto">Vendas de Boxeo de 5 metros</a>
-                    <div class="detalles-producto">
-                        <span>Attributes</span>
-                        <span class="precio-producto">$6,590</span>
-                    </div>
-                </div>
-                <div class="tarjeta-producto">
-                    <div class="imagen-placeholder"></div>
-                    <a href="#" class="titulo-producto">Cabezal de Boxeo Talla M </a>
-                    <div class="detalles-producto">
-                        <span>Attributes</span>
-                        <span class="precio-producto">$15,790</span>
-                    </div>
-                </div>
-                <div class="tarjeta-producto">
-                    <div class="imagen-placeholder"></div>
-                    <a href="#" class="titulo-producto">Guantes de Boxeo 12 oz</a>
-                    <div class="detalles-producto">
-                        <span>Attributes</span>
-                        <span class="precio-producto">$12,790</span>
-                    </div>
-                </div>
+                <p id="mensaje-catalogo" class="estado-catalogo" aria-live="polite">Cargando productos...</p>
+                <div class="cuadricula-productos" id="productos-destacados"></div>
             </section>
         </main>
     </div>
@@ -132,13 +80,15 @@
             </div>
 
             <div class="pie-centro">
-                <a href="#">Categoría X</a> |
-                <a href="#">Categoría Y</a> |
-                <a href="#">Categoría Z</a>
+                <a href="paginas/productos.html">Productos</a> |
+                <a href="paginas/carrito.html">Carrito</a> |
+                <a href="paginas/contacto.html">Contacto</a> |
+                <a href="paginas/admin.html">Administración</a>
             </div>
         </div>
     </footer>
 
+    <script src="logica/index.js"></script>
 </body>
 
 </html>

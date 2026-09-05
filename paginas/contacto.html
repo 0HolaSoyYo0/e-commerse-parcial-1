@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+
+<body>
+    <main class="contenedor">
+        <h1>Contacto</h1>
+        <form class="formulario">
+            <div class="entrada">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" maxlength="100" required>
+            </div>
+            <div class="entrada correo">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" maxlength="100" required>
+            </div>
+            <div class="entrada direccion">
+                <label for="comentario">Comentario</label>
+                <textarea id="comentario" name="comentario" maxlength="500" rows="6" required></textarea>
+            </div>
+            <div class="boton-envio">
+                <button id="enviar" type="submit">Enviar mensaje</button>
+            </div>
+        </form>
+        <p><a href="../index.html">Volver al inicio</a></p>
+    </main>
+</body>
+
+</html>

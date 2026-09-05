@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenedor de usuarios</title>
+    <link rel="stylesheet" href="../estilos/style.css">
+</head>
+
+<body>
+    <header>
+        <a href="admin.html">Administración</a>
+        <nav>
+            <a href="admin-productos.html">Productos</a>
+            <a href="../index.html">Salir</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Mantenedor de usuarios</h1>
+        <section>
+            <h2>Crear usuario</h2>
+            <form>
+                <p><label for="run">RUN</label> <input type="text" id="run" name="run" minlength="7" maxlength="9" required></p>
+                <p><label for="nombre">Nombre</label> <input type="text" id="nombre" name="nombre" maxlength="50" required></p>
+                <p><label for="apellidos">Apellidos</label> <input type="text" id="apellidos" name="apellidos" maxlength="100" required></p>
+                <p><label for="correo">Correo</label> <input type="email" id="correo" name="correo" maxlength="100" required></p>
+                <p><label for="fecha-nacimiento">Fecha de nacimiento</label> <input type="date" id="fecha-nacimiento" name="fechaNacimiento"></p>
+                <p><label for="tipo">Tipo de usuario</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Seleccionar</option>
+                        <option value="administrador">Administrador</option>
+                        <option value="vendedor">Vendedor</option>
+                        <option value="cliente">Cliente</option>
+                    </select>
+                </p>
+                <p><label for="direccion">Dirección</label> <input type="text" id="direccion" name="direccion" maxlength="300" required></p>
+                <button type="submit">Guardar usuario</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Usuarios registrados</h2>
+            <p>Aquí se mostrará el listado para editar o eliminar usuarios.</p>
+        </section>
+    </main>
+</body>
+
+</html>
